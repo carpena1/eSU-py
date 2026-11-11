@@ -228,13 +228,13 @@ To use it for your own model:
 The program writes this table (`gfunction_EE_Measures.txt`):
 
 ```text
-facname       mu*            mu             sigma          Monotonic  Interactions
-x1            2.1682e+00    4.9419e-02    2.5781e+00   N          Y
-x2            1.0449e+00    1.9141e-01    1.3586e+00   N          Y
-x3            4.1894e-01    2.5309e-02    5.8991e-01   N          Y
-x4            2.5800e-01   -4.6759e-03    3.5399e-01   N          Y
-x5            2.3341e-02    4.9665e-03    3.3560e-02   N          Y
-x6            1.8526e-02    4.0030e-03    2.3262e-02   N          Y
+facname          mu*           mu        sigma  Monotonic  Interactions
+x1        2.1682e+00   4.9419e-02   2.5781e+00      N           Y
+x2        1.0449e+00   1.9141e-01   1.3586e+00      N           Y
+x3        4.1894e-01   2.5309e-02   5.8991e-01      N           Y
+x4        2.5800e-01  -4.6759e-03   3.5399e-01      N           Y
+x5        2.3341e-02   4.9665e-03   3.3560e-02      N           Y
+x6        1.8526e-02   4.0030e-03   2.3262e-02      N           Y
 ```
 
 Section 7 explains how to read the table and the plot.

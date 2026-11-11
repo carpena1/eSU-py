@@ -153,13 +153,16 @@ def bootstrap_ci(x, stat, n=100, alpha=0.05, rng=None):
 
 
 def format_measures(labels, mu_star, mu, sigma):
-    """Text table matching the MATLAB EE_Measures.txt columns."""
-    out = ["facname       mu*            mu             sigma          Monotonic  Interactions"]
+    """Text table with the MATLAB EE_Measures.txt columns. The columns line up
+    for any label length."""
+    labels = [str(s) for s in labels]
+    w = max([len("facname")] + [len(s) for s in labels])
     mono = monotonic_mask(mu_star, mu)
+    out = [f"{'facname':<{w}}  {'mu*':>11}  {'mu':>11}  {'sigma':>11}  Monotonic  Interactions"]
     for i, lab in enumerate(labels):
         inter = "Y" if mu_star[i] <= sigma[i] else "N"
-        out.append(f"{lab:<12} {mu_star[i]: .4e}   {mu[i]: .4e}   {sigma[i]: .4e}   "
-                   f"{'Y' if mono[i] else 'N':<9}  {inter}")
+        out.append(f"{lab:<{w}}  {mu_star[i]:11.4e}  {mu[i]:11.4e}  {sigma[i]:11.4e}  "
+                   f"{'Y' if mono[i] else 'N':^9}  {inter:^12}".rstrip())
     return "\n".join(out)
 
 
