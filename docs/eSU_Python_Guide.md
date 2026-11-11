@@ -245,6 +245,17 @@ Use `esu_files.py` when your model is a separate program. You do not need to
 write Python. The data goes through CSV files (comma-separated text files that
 Excel can open and save).
 
+> **Where to run the commands.** Run all commands in your work folder: the
+> folder that has `factors.csv`. Python must find `esu_files.py`, so write its
+> path before the name:
+>
+> - In the `examples/` folder, `esu_files.py` is one level up. Use
+>   `python ../esu_files.py ...` (as in the commands below).
+> - If you copy `esu_files.py` and `esu.py` into your work folder, use
+>   `python esu_files.py ...`.
+> - From any other folder, use the full path, for example
+>   `python ~/eSU-py/esu_files.py ...`.
+
 ## 5.1 Step 1: describe the factors
 
 Make a file `factors.csv` with a header row and one row per factor. The columns
@@ -266,7 +277,7 @@ dummy,0,1
 ## 5.2 Step 2: make the sample
 
 ```bash
-python esu_files.py sample factors.csv --p 8 --r 16 --seed 1
+python ../esu_files.py sample factors.csv --p 8 --r 16 --seed 1
 ```
 
 The program writes two files:
@@ -315,7 +326,7 @@ ignores the elementary effects that use this run (see Section 8.4).
 ## 5.4 Step 4: analyze
 
 ```bash
-python esu_files.py analyze
+python ../esu_files.py analyze
 ```
 
 The program prints the measures (sorted by $\mu^*$) and writes, for each output
