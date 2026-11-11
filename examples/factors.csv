@@ -1,0 +1,6 @@
+name,lo,hi
+Ks,1,50
+porosity,0.30,0.50
+CN,60,90
+slope,0.01,0.10
+dummy,0,1

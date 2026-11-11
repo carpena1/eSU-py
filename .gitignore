@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+# files made when you run the examples or the tests
+examples/esu_sample.csv
+examples/esu_design.json
+examples/esu_outputs.csv
+examples/EE_*
+examples/gfunction_EE*
+tests/*.png
+docs/*.html
+# macOS
+.DS_Store

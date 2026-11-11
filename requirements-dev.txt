@@ -1,0 +1,3 @@
+# Development / validation only. You do not need these to use esu.py.
+SALib      # tests/validate_salib.py: compare eSU with SALib's Method of Morris
+openpyxl   # tests/validate_esu.py: read the MATLAB example .xlsx files

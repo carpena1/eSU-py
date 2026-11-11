@@ -1,0 +1,45 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it and the method papers below."
+title: "eSU-py: Elementary Effects global sensitivity analysis with Enhanced Sampling for Uniformity (eSU)"
+authors:
+  - family-names: Khare
+    given-names: Yogesh P.
+  - family-names: Muñoz-Carpena
+    given-names: Rafael
+license: MIT
+repository-code: "https://github.com/carpena1/eSU-py"
+url: "https://abe.ufl.edu/carpena/software/morris-su-sampling/"
+references:
+  - type: article
+    authors:
+      - family-names: Khare
+        given-names: Yogesh P.
+      - family-names: Muñoz-Carpena
+        given-names: Rafael
+      - family-names: Rooney
+        given-names: R.W.
+      - family-names: Martinez
+        given-names: C.J.
+    title: "A multi-criteria trajectory-based parameter sampling strategy for the screening method of elementary effects"
+    journal: "Environmental Modelling & Software"
+    volume: 64
+    start: 230
+    end: 239
+    year: 2015
+    doi: "10.1016/j.envsoft.2014.11.013"
+  - type: conference-paper
+    authors:
+      - family-names: Chitale
+        given-names: J.
+      - family-names: Khare
+        given-names: Yogesh P.
+      - family-names: Muñoz-Carpena
+        given-names: Rafael
+      - family-names: Dulikravich
+        given-names: George S.
+      - family-names: Martinez
+        given-names: C.J.
+    title: "An effective parameter screening strategy for high dimensional models"
+    collection-title: "ASME International Mechanical Engineering Congress and Exposition, Volume 7: Fluids Engineering"
+    year: 2017
+    doi: "10.1115/IMECE2017-71458"

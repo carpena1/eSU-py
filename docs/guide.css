@@ -1,0 +1,32 @@
+/* Print style for eSU_Python_Guide (pandoc HTML -> Chrome PDF) */
+@page { size: Letter; margin: 20mm 18mm 20mm 18mm; }
+body { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 10.5pt;
+       line-height: 1.45; color: #1a1a1a; background: #fff; max-width: none; margin: 0; }
+header#title-block-header { border-bottom: 2px solid #0021A5; margin-bottom: 1.2em; padding-bottom: .6em; }
+h1.title { font-size: 22pt; color: #0021A5; margin: 0 0 .2em 0; }
+p.subtitle { font-size: 12.5pt; color: #444; margin: 0 0 .4em 0; }
+p.date { color: #666; margin: 0; }
+nav#TOC { page-break-after: always; }
+nav#TOC > ul { list-style: none; padding-left: 0; }
+nav#TOC ul ul { list-style: none; padding-left: 1.4em; }
+nav#TOC a { color: #1a1a1a; text-decoration: none; }
+h1 { font-size: 15pt; color: #0021A5; margin-top: 1.6em; border-bottom: 1px solid #ccd;
+     padding-bottom: .15em; page-break-after: avoid; }
+h2 { font-size: 12.5pt; color: #FA4616; margin-top: 1.3em; page-break-after: avoid; }
+p, li { orphans: 3; widows: 3; }
+a { color: #0021A5; }
+code { font-family: Menlo, Consolas, monospace; font-size: 9pt; background: #f3f4f7;
+       padding: 0 .2em; border-radius: 2px; }
+pre { white-space: pre-wrap; background: #f3f4f7; border-left: 3px solid #0021A5; padding: .6em .8em;
+      font-size: 8.6pt; line-height: 1.35; overflow-x: auto; }
+pre code { background: none; padding: 0; }
+table { border-collapse: collapse; margin: .8em 0; font-size: 9.5pt; }
+th, td { border: 1px solid #c9ccd6; padding: .3em .55em; vertical-align: top; text-align: left; }
+th { background: #e8ebf5; }
+blockquote { margin: .8em 0; padding: .4em .9em; background: #fff6ec; border-left: 3px solid #FA4616; }
+blockquote p { margin: .2em 0; }
+figure { margin: 1em 0; text-align: center; page-break-inside: avoid; }
+figure img { max-width: 100%; }
+figcaption { font-size: 9pt; color: #444; margin-top: .3em; text-align: left; }
+math[display="block"] { margin: .6em 0; }
+tr { page-break-inside: avoid; }
