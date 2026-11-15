@@ -34,8 +34,16 @@ except ImportError:                                   # esu.py one folder up
 
 
 def read_factors(path):
-    with open(path, newline="") as fh:
-        rows = [r for r in csv.DictReader(fh) if r.get("name", "").strip()]
+    # utf-8-sig: accept the byte-order mark that Excel writes in "CSV UTF-8" files
+    with open(path, newline="", encoding="utf-8-sig") as fh:
+        rd = csv.DictReader(fh)
+        rd.fieldnames = [f.strip().lower() for f in rd.fieldnames or []]
+        if not {"name", "lo", "hi"} <= set(rd.fieldnames):
+            sys.exit(f"{path}: the first row must be the header name,lo,hi "
+                     f"(found: {','.join(rd.fieldnames)})")
+        rows = [r for r in rd if (r.get("name") or "").strip()]
+    if not rows:
+        sys.exit(f"{path}: no factor rows found")
     names = [r["name"].strip() for r in rows]
     lo = [float(r["lo"]) for r in rows]
     hi = [float(r["hi"]) for r in rows]
@@ -48,7 +56,7 @@ def read_factors(path):
 def read_table(path):
     """(header, values[n x c]) from a CSV file with a header row.
     Empty cells and text such as 'nan' or 'NA' become NaN (a failed run)."""
-    with open(path, newline="") as fh:
+    with open(path, newline="", encoding="utf-8-sig") as fh:
         rows = [r for r in csv.reader(fh) if r and any(c.strip() for c in r)]
     header = [h.strip() for h in rows[0]]
 
